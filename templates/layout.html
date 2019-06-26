@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Flask App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'css/mains.css')  }}"
+
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1 class ="logo">Sara's Web Page</h1>
+                <strong><nav>
+                    <ul class="menu">
+                        <!-- URLFOR it triggers the python home function -->
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
+                    </ul>
+                </nav></strong>
+            </div>    
+        </header>
+        <div clas="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
